@@ -5,7 +5,7 @@
  */
 package Seguridad.Controlador;
 import java.util.List;
-import Seguridad.Modelo.daoPerfil;
+import Seguridad.Modelo.daoCuentas;
 /**
  *
  * @author visitante
@@ -67,33 +67,33 @@ public class clsCuentas {
     //Metodos de acceso a la capa controlador
     public clsCuentas getBuscarInformacionPerfilPorNombre(clsCuentas perfil)
     {
-        daoPerfil daoperfil = new daoPerfil();
+        daoCuentas daoperfil = new daoCuentas();
         return daoperfil.consultaPerfilPorNombre(perfil);
     }
     public clsCuentas getBuscarInformacionPerfilPorId(clsCuentas perfil)
     {
-        daoPerfil daoperfil = new daoPerfil();
+        daoCuentas daoperfil = new daoCuentas();
         return daoperfil.consultaPerfilPorId(perfil);
     }    
     public List<clsCuentas> getListadoPerfiles()
     {
-        daoPerfil daoperfil = new daoPerfil();
+        daoCuentas daoperfil = new daoCuentas();
         List<clsCuentas> listadoPerfiles = daoperfil.consultaPerfil();
         return listadoPerfiles;
     }
     public int setBorrarPerfil(clsCuentas perfil)
     {
-        daoPerfil daoperfil = new daoPerfil();
+        daoCuentas daoperfil = new daoCuentas();
         return daoperfil.borrarPerfil(perfil);
     }          
     public int setIngresarPerfil(clsCuentas perfil)
     {
-        daoPerfil daoperfil = new daoPerfil();
+        daoCuentas daoperfil = new daoCuentas();
         return daoperfil.ingresaPerfil(perfil);
     }              
     public int setModificarPerfil(clsCuentas perfil)
     {
-        daoPerfil daoperfil = new daoPerfil();
+        daoCuentas daoperfil = new daoCuentas();
         return daoperfil.actualizaPerfil(perfil);
     }              
 }
