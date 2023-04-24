@@ -129,7 +129,7 @@ public class frmMantenimientoTipoUsuario extends javax.swing.JInternalFrame {
         });
 
         label3.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        label3.setText("Nombre");
+        label3.setText("Nombre del cliente");
 
         txtNombre.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         txtNombre.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(204, 204, 204)));
@@ -156,7 +156,7 @@ public class frmMantenimientoTipoUsuario extends javax.swing.JInternalFrame {
         txtContrasena.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(204, 204, 204)));
 
         label5.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        label5.setText("Estatus");
+        label5.setText("Debe");
 
         lb.setForeground(new java.awt.Color(204, 204, 204));
         lb.setText(".");
@@ -223,9 +223,9 @@ public class frmMantenimientoTipoUsuario extends javax.swing.JInternalFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(label1)
-                        .addGap(294, 550, Short.MAX_VALUE))
+                        .addGap(294, 485, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 569, Short.MAX_VALUE)
                         .addContainerGap())))
         );
         layout.setVerticalGroup(

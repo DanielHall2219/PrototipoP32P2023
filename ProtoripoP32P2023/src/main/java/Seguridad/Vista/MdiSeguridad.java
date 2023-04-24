@@ -183,7 +183,7 @@ public class MdiSeguridad extends javax.swing.JFrame {
 
     private void mantenimientoPerfilesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mantenimientoPerfilesActionPerformed
         // TODO add your handling code here:
-        frmMantenimientoPerfil ventana = new frmMantenimientoPerfil();
+        frmMantenimientoCuentascorrientes ventana = new frmMantenimientoCuentascorrientes();
         jDesktopPane1.add(ventana);
         Dimension desktopSize = jDesktopPane1.getSize();
         Dimension FrameSize = ventana.getSize();
