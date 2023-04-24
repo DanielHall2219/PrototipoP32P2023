@@ -18,7 +18,7 @@ import java.util.List;
  *
  * @author visitante
  */
-public class daoPerfil {
+public class daoCuentas {
 
 
     private static final String SQL_SELECT = "SELECT perid, pernombre, perestatus FROM tbl_perfil";
