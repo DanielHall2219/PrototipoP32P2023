@@ -36,8 +36,9 @@ public class frmMantenimientoPerfil extends javax.swing.JInternalFrame {
     public void llenadoDeTablas() {
         DefaultTableModel modelo = new DefaultTableModel();
         modelo.addColumn("ID");
-        modelo.addColumn("nombre");
-        modelo.addColumn("Estatus");
+        modelo.addColumn("Nombre del cliente");
+        modelo.addColumn("Debe");
+        modelo.addColumn("Haber");
         clsPerfil perfil = new clsPerfil();
         //VendedorDAO vendedorDAO = new VendedorDAO();
         List<clsPerfil> listaPerfiles = perfil.getListadoPerfiles();
@@ -92,8 +93,7 @@ public class frmMantenimientoPerfil extends javax.swing.JInternalFrame {
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
-        setResizable(true);
-        setTitle("Mantenimiento Perfiles");
+        setTitle("Mantenimiento Cuentas Corrientes");
         setVisible(true);
 
         btnEliminar.setText("Eliminar");
@@ -128,7 +128,7 @@ public class frmMantenimientoPerfil extends javax.swing.JInternalFrame {
         });
 
         label3.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        label3.setText("Nombre");
+        label3.setText("Nombre del cliente");
 
         txtNombre.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         txtNombre.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(204, 204, 204)));
@@ -146,7 +146,7 @@ public class frmMantenimientoPerfil extends javax.swing.JInternalFrame {
 
             },
             new String [] {
-                "ID Vendedor", "ID Empleado", "Correo", "Telefono", "Direccion", "Porcentaje", "Comision"
+                "Nombre del cliente", "ID Empleado", "Correo", "Telefono", "Direccion", "Porcentaje", "Comision"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -163,7 +163,7 @@ public class frmMantenimientoPerfil extends javax.swing.JInternalFrame {
         txtContrasena.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(204, 204, 204)));
 
         label5.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        label5.setText("Estatus");
+        label5.setText("Debe");
 
         lb.setForeground(new java.awt.Color(204, 204, 204));
         lb.setText(".");
@@ -223,17 +223,19 @@ public class frmMantenimientoPerfil extends javax.swing.JInternalFrame {
                                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGap(14, 14, 14)
                             .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnActualizar)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(19, 19, 19)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnActualizar)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(label1)
+                                .addGap(294, 547, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(label1)
-                        .addGap(294, 612, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE)
-                        .addContainerGap())))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 582, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
