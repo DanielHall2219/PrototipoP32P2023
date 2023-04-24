@@ -8,7 +8,7 @@
 //Meyglin del Rosario Rosales Ochoa Carne: 9959-21-4490
 package Seguridad.Modelo;
 
-import Seguridad.Controlador.clsPerfil;
+import Seguridad.Controlador.clsCuentas;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -28,14 +28,14 @@ public class daoPerfil {
     private static final String SQL_SELECT_NOMBRE = "SELECT perid, pernombre, perestatus FROM tbl_perfil WHERE pernombre = ?";
     private static final String SQL_SELECT_ID = "SELECT perid, pernombre, perestatus FROM tbl_perfil WHERE perid = ?";    
 
-    public List<clsPerfil> consultaPerfil() {
+    public List<clsCuentas> consultaPerfil() {
 
         Connection conn = null;
         PreparedStatement stmt = null;
         ResultSet rs = null;
         
 
-        List<clsPerfil> perfiles = new ArrayList<>();
+        List<clsCuentas> perfiles = new ArrayList<>();
 
         try {
             conn = Conexion.getConnection();
@@ -46,7 +46,7 @@ public class daoPerfil {
                 int id = rs.getInt("perid");
                 String nombre = rs.getString("pernombre");
                 String estatus = rs.getString("perestatus");
-                clsPerfil perfil = new clsPerfil();
+                clsCuentas perfil = new clsCuentas();
                 perfil.setIdPerfil(id);
                 perfil.setNombrePerfil(nombre);
                 perfil.setEstatusPerfil(estatus);
@@ -64,7 +64,7 @@ public class daoPerfil {
         return perfiles;
     }
 
-    public int ingresaPerfil(clsPerfil perfil) {
+    public int ingresaPerfil(clsCuentas perfil) {
 
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -91,7 +91,7 @@ public class daoPerfil {
     }
 
 
-    public int actualizaPerfil(clsPerfil perfil) {
+    public int actualizaPerfil(clsCuentas perfil) {
 
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -120,7 +120,7 @@ public class daoPerfil {
     }
 
 
-    public int borrarPerfil(clsPerfil perfil) {
+    public int borrarPerfil(clsCuentas perfil) {
 
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -146,7 +146,7 @@ public class daoPerfil {
     }
 
 
-    public clsPerfil consultaPerfilPorNombre(clsPerfil perfil) {
+    public clsCuentas consultaPerfilPorNombre(clsCuentas perfil) {
 
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -184,7 +184,7 @@ public class daoPerfil {
 
         return perfil;
     }
-    public clsPerfil consultaPerfilPorId(clsPerfil perfil) {
+    public clsCuentas consultaPerfilPorId(clsCuentas perfil) {
 
         Connection conn = null;
         PreparedStatement stmt = null;
